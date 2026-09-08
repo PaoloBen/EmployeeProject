@@ -42,11 +42,9 @@ public class HourlyEmployee {
     public float getTotalHoursWorked() {
         return totalHoursWorked;
     }
-
     public void setTotalHoursWorked(float totalHoursWorked) {
         if (totalHoursWorked >= 0) this.totalHoursWorked = totalHoursWorked;
     }
-
     public double getRatePerHour() {
         return ratePerHour;
     }
