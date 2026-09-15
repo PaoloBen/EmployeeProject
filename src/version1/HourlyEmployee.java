@@ -7,13 +7,13 @@ public class HourlyEmployee {
     private double ratePerHour;
 
     public HourlyEmployee() {
-        this.empId = 0;
+        this.empID = 0;
         this.empName = "N/A";
         this.totalHoursWorked = 0.0f;
         this.ratePerHour = 0.0;
     }
 
-    public HourlyEmployee(int empId, String empName) {
+    public HourlyEmployee(int empID, String empName) {
         this.empID = empID;
         this.empName = empName;
         this.totalHoursWorked = 0.0f;
@@ -23,8 +23,8 @@ public class HourlyEmployee {
     public HourlyEmployee(int empID, String empName, float totalHoursWorked, double ratePerHour) {
         this.empID = empID;
         this.empName = empName;
-        setTotalHoursWorked = (totalHoursWorked);
-        setRatePerHour = (ratePerHour);
+        setTotalHoursWorked(totalHoursWorked);
+        setRatePerHour(ratePerHour);
     }
 
     public int getEmpID() {
@@ -62,11 +62,11 @@ public class HourlyEmployee {
     }
 
     public void displayHourlyEmployee () {
-        System.out.printf("ID: %d | Name: %s | Hours: %.2f | Rate: ₱%.2f/hr%n",empID, empName, totalHoursWorked, ratePerHour);
+        System.out.printf("ID: %d | Name: %s | Hours: %.2f | Rate: ₱%.2f/hr%n", empID, empName, totalHoursWorked, ratePerHour);
     }
 
     @Override
     public String toString () {
-        return String.format("HourlyEmployee [ID: %d, Name: %s, Hours: %.2f, Rate: ₱%.2f, Total Salary: ₱%.2f]",empID, empName, totalHoursWorked, ratePerHour, computeSalary());
+        return String.format("HourlyEmployee [ID: %d, Name: %s, Hours: %.2f, Rate: ₱%.2f, Total Salary: ₱%.2f]", empID, empName, totalHoursWorked, ratePerHour, computeSalary());
     }
 }
